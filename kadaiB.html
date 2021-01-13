@@ -18,12 +18,22 @@
       text-align: center;
       line-height: 100px;
     }
-    .win {
+    .dk {
       background: pink;
       border-radius: 50%;
       transform: rotate(360deg);
     }
-    .lose {
+    .tk {
+      background: orange;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    .sk {
+      background: yellowgreen;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    .kyo {
       transform: scale(0.9);
     }
   </style>
@@ -33,7 +43,7 @@
   <script>
     'use strict';
 
-    const num = 5;
+    const num = 10;
     const winner = Math.floor(Math.random() * num); // 0 - 4
 
     for (let i = 0; i < num; i++) {
