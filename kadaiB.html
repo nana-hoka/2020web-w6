@@ -47,9 +47,11 @@
     const dk = Math.floor(Math.random() * num); // 0 - 10
     while ( dk !== tk ) {
       const tk = Math.floor(Math.random() * num);
+      break;
     }
     while ( dk !== sk && tk !== sk ) {
       const sk = Math.floor(Math.random() * num);
+      break;
     }
     
     
