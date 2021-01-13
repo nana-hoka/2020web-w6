@@ -44,20 +44,22 @@
     'use strict';
 
     const num = 10;
-    const winner = Math.floor(Math.random() * num); // 0 - 4
+    const dk = Math.floor(Math.random() * num); // 0 - 4
+    const tk = Math.floor(Math.random() * num);
+    const sk = Math.floor(Math.random() * num);
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (i === winner) {
+        if (i === dk) {
           div.textContent = '大吉！';
           div.classList.add('dk');
-        } else {
+        } else if (i === tk){
           div.textContent = '中吉！';
           div.classList.add('tk');
-        } else {
+        } else if (i === sk){
           div.textContent = '小吉！';
           div.classList.add('sk');
         } else {
