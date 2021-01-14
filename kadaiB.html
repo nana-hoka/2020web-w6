@@ -9,7 +9,7 @@
       flex-wrap: wrap;
     }
     .box {
-      width: 100px;
+      width: 70px;
       height: 100px;
       background: skyblue;
       cursor: pointer;
@@ -45,15 +45,9 @@
 
     const num = 10;
     const dk = Math.floor(Math.random() * num); // 0 - 10
-    while ( dk !== tk ) {
-      const tk = Math.floor(Math.random() * num);
-      break;
-    }
-    while ( dk !== sk && tk !== sk ) {
-      const sk = Math.floor(Math.random() * num);
-      break;
-    }
-    
+    const tk = Math.floor(Math.random() * num);
+    const sk = Math.floor(Math.random() * num);
+
     
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
