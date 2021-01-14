@@ -41,24 +41,26 @@
   <script>
     'use strict';
     
-    function random() {
-      var arr = [];
-      numArr = [];
-      for (var i = 0; i < 10; i++) {
-        arr[i] = i+1;
-      }
-      for (var j = 0, var len = arr.length; j < 10; j++, len--){
-        rndNum = Math.floor(Math.random()*len);
-        numArr.push(arr[rndNum]);
-        arr[rndNum] = arr[len-1];
-      }
-      return arr[rndNum];
-    }
-
-    const num = 10;
-    const dk = random();
-    const tk = random();
-    const sk = random();
+    
+    function intRandom(min,max){
+      return Math.floor( Math.random() * (max - min + 1)) + min;
+      
+       var randoms = [];
+       var min = 1;  max = 10;
+       for (i = min, i <= max; i++) {
+         while (true) {
+           var tmp = intRandom(min,max);
+           if (!randoms.includes(tmp)){
+             randoms.push(tmp);
+             break;
+           }
+         }
+       }
+    
+    var k = 3;
+    const dk = randoms[k]
+    const tk = randoms[k+1];
+    const sk = randoms[k+2];
     
     
     for (let i = 0; i < num; i++) {
