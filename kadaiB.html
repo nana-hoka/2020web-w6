@@ -40,12 +40,25 @@
 
   <script>
     'use strict';
+    
+    function random() {
+      var arr = [];
+      numArr = [];
+      for (var i = 0; i < 10; i++) {
+        arr[i] = i+1;
+      }
+      for (var j = 0, var len = arr.length; j < 10; j++, len--){
+        rndNum = Math.floor(Math.random()*len);
+        numArr.push(arr[rndNum]);
+        arr[rndNum] = arr[len-1];
+      }
+    }
 
     const num = 10;
-    const dk = Math.floor(Math.random() * num); // 0 - 10
-    const tk = Math.floor(Math.random() * num);
-    const sk = Math.floor(Math.random() * num);
-
+    const dk = random();
+    const tk = random();
+    const sk = random();
+    
     
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
