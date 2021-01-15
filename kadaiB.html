@@ -58,10 +58,14 @@
          }
        }
     
-    var k = 3;
-    const dk = randoms[k]
+    div.textContent = '今年の運勢を占ってみよう！！';
+    div.textContent = '「大吉、中吉、小吉、凶」が含まれているよ！';
+    div.textContent =　'一つ選んでね( ＾∀＾) ';
+    
+    var k = 0;
+    const dk = randoms[k];
     const tk = randoms[k+1];
-    const sk = randoms[k+2];
+    const kyo = randoms[k+2];
     
     const num = 10;
     
@@ -76,12 +80,12 @@
         } else if (i === tk){
           div.textContent = '中吉！';
           div.classList.add('tk');
-        } else if (i === sk){
-          div.textContent = '小吉！';
-          div.classList.add('sk');
-        } else {
+        } else if (i === kyo){
           div.textContent = '凶！';
           div.classList.add('kyo');
+        } else {
+          div.textContent = '小吉！';
+          div.classList.add('sk');
         }
       });
 
